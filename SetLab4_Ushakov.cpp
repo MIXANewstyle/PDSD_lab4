@@ -78,7 +78,7 @@ bool MySet::IsEmpty() const {
 bool MySet::IsInSet(int value) const {
     // Используем итераторы и std::find
     // (Подключен через <algorithm> в .h)
-    return (std::find(_elements.begin(), _elements.end(), value) != _elements.end());
+    return (find(_elements.begin(), _elements.end(), value) != _elements.end());
 }
 
 // --- F4. Добавление элемента ---
@@ -145,8 +145,6 @@ bool MySet::IsEqual(const MySet& otherSet) const {
     // Если размеры равны, достаточно проверить, что A ⊂ B
     return this->IsSubset(otherSet); // F9
 
-    // (Альтернатива, как в ЛР3: 
-    // return this->IsSubset(otherSet) && otherSet.IsSubset(*this); )
 }
 
 // --- F11. Объединение ---
@@ -186,7 +184,7 @@ MySet MySet::Difference(const MySet& otherSet) const {
 
     // Идем по 'this' (A)
     for (int elem : _elements) {
-        // Если элемент A НЕту в B (F3)
+        // Если элемент A нету в B (F3)
         if (!otherSet.IsInSet(elem)) {
             result.AddElement(elem); // F4
         }
