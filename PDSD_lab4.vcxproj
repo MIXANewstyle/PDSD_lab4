@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="PDSD_lab4.cpp" />
+    <ClCompile Include="SetLab4_Ushakov.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SetLab4_Ushakov.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
