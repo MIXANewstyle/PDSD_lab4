@@ -4,16 +4,15 @@
 #include <random>       // для генерации размера
 #include <iomanip>      // для boolalpha (вывод true/false)
 
-// !!! ИЗМЕНЕНИЕ: Подключаем НОВЫЙ .h файл !!!
 #include "SetLab4_Ushakov.h" 
 
 using namespace std;
 
 // Глобальный генератор для main (чтобы получить размер)
 int GetRandomInt(int minVal, int maxVal) {
-    static std::random_device rd;
-    static std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dist(minVal, maxVal);
+    static random_device rd;
+    static mt19937 gen(rd());
+    uniform_int_distribution<> dist(minVal, maxVal);
     return dist(gen);
 }
 

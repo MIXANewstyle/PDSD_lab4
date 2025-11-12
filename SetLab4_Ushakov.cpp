@@ -7,7 +7,7 @@ using namespace std;
 // --- Вспомогательный метод ---
 int MySet::getRandomInt(int minVal, int maxVal) {
     static random_device rd;
-    static mt1997 gen(rd());
+    static mt19937 gen(rd());
     std::uniform_int_distribution<> dist(minVal, maxVal);
     return dist(gen);
 }
